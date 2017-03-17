@@ -59,7 +59,7 @@ yarn run dev
 or
 
 ```sh
-yarn run vertxDev
+yarn run dev:vertx
 ```
 
 > This is a full web server nicely suited to your project. Any time you make changes within the `src` directory, it will rebuild and even refresh your browser.
@@ -76,6 +76,12 @@ yarn test
 
 ```sh
 yarn run build
+```
+
+or
+
+```sh
+yarn run build:vertx
 ```
 
 > You can now deploy the contents of the `build` directory to production!
@@ -96,7 +102,7 @@ yarn start
 or
 
 ```sh
-yarn vertxStart
+yarn start:vertx
 ```
 
 > This is to simulate a production (CDN) server with gzip. It just serves up the contents of `./build`.

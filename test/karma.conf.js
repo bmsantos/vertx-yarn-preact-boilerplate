@@ -5,7 +5,7 @@ var path = require('path');
 webpack.module.loaders.push({
 	test: /\.jsx?$/,
 	loader: 'isparta',
-	include: path.resolve(__dirname, '../src')
+	include: path.resolve(__dirname, '../web_src')
 });
 
 module.exports = function(config) {

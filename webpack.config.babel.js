@@ -12,7 +12,7 @@ const ENV = process.env.NODE_ENV || 'development';
 const CSS_MAPS = ENV!=='production';
 
 module.exports = {
-	context: path.resolve(__dirname, "src"),
+	context: path.resolve(__dirname, "web_src"),
 	entry: './index.js',
 
 	output: {
@@ -24,13 +24,13 @@ module.exports = {
 	resolve: {
 		extensions: ['', '.jsx', '.js', '.json', '.less'],
 		modulesDirectories: [
-			path.resolve(__dirname, "src/lib"),
+			path.resolve(__dirname, "web_src/lib"),
 			path.resolve(__dirname, "node_modules"),
 			'node_modules'
 		],
 		alias: {
-			components: path.resolve(__dirname, "src/components"),    // used for tests
-			style: path.resolve(__dirname, "src/style"),
+			components: path.resolve(__dirname, "web_src/components"),    // used for tests
+			style: path.resolve(__dirname, "web_src/style"),
 			'react': 'preact-compat',
 			'react-dom': 'preact-compat'
 		}
@@ -53,7 +53,7 @@ module.exports = {
 			{
 				// Transform our own .(less|css) files with PostCSS and CSS-modules
 				test: /\.(less|css)$/,
-				include: [path.resolve(__dirname, 'src/components')],
+				include: [path.resolve(__dirname, 'web_src/components')],
 				loader: ExtractTextPlugin.extract('style?singleton', [
 					`css-loader?modules&importLoaders=1&sourceMap=${CSS_MAPS}`,
 					`postcss-loader`,
@@ -62,7 +62,7 @@ module.exports = {
 			},
 			{
 				test: /\.(less|css)$/,
-				exclude: [path.resolve(__dirname, 'src/components')],
+				exclude: [path.resolve(__dirname, 'web_src/components')],
 				loader: ExtractTextPlugin.extract('style?singleton', [
 					`css-loader?sourceMap=${CSS_MAPS}`,
 					`postcss-loader`,
@@ -167,7 +167,7 @@ module.exports = {
 		host: 'localhost',
 		colors: true,
 		publicPath: '/',
-		contentBase: './src',
+		contentBase: './web_src',
 		historyApiFallback: true,
 		open: true,
 		proxy: {

@@ -2,17 +2,19 @@
   "name": "preact-boilerplate",
   "version": "5.0.0",
   "description": "Ready-to-go Preact starter project powered by webpack.",
+  "main": "server_lib/server.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress",
-    "vertxDev": "export VERTX_OPTS=-Dvertx.disableFileCaching=true && ./node_modules/.bin/vertx run --redeploy=src/**/* --on-redeploy=\"yarn build\" --launcher-class=io.vertx.core.Launcher server.js",
-    "start": "serve webroot -s -c 1",
-    "vertxStart": "./node_modules/.bin/vertx run server.js",
+    "dev:vertx": "export VERTX_OPTS=-Dvertx.disableFileCaching=true && ./node_modules/.bin/vertx run --redeploy=\"web_src/**/* server_src/**/*\" --on-redeploy=\"yarn build\" --launcher-class=io.vertx.core.Launcher server_lib/server.js",
+    "start": "serve ./webroot -s -c 1",
+    "start:vertx": "./node_modules/.bin/vertx run server_lib/server.js",
     "prestart": "npm run build",
     "build": "cross-env NODE_ENV=production webpack -p --progress",
-    "prebuild": "mkdirp webroot && ncp src/assets webroot/assets",
+    "build:vertx": "rm -Rf lib && ./node_modules/.bin/babel --out-dir server_lib server_src",
+    "prebuild": "mkdirp webroot && ncp web_src/assets webroot/assets",
     "test": "npm run -s lint && npm run -s test:karma",
     "test:karma": "karma start test/karma.conf.js --single-run",
-    "lint": "eslint {src,test}"
+    "lint": "eslint {web_src,test,server_src}"
   },
   "keywords": [
     "preact",
@@ -23,7 +25,7 @@
   "author": "Jason Miller <jason@developit.ca>",
   "devDependencies": {
     "autoprefixer": "^6.4.0",
-    "babel": "^6.5.2",
+    "babel-cli": "6.2.0",
     "babel-core": "^6.14.0",
     "babel-eslint": "^7.0.0",
     "babel-loader": "^6.2.5",
@@ -74,7 +76,7 @@
     "webpack-dev-server": "^1.15.0"
   },
   "dependencies": {
-    "vertx3-full": "3.4.0",
+    "vertx3-full": "3.4.1",
     "preact": "^7.1.0",
     "preact-compat": "^3.0.0",
     "preact-router": "^2.0.0",
