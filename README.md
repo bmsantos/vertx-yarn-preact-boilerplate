@@ -9,8 +9,7 @@ Below is a step-by-step guide that takes you straight from downloading this boil
 
 If you are a frontend developer you might be familiar with JavaScript and if you've been following the hype of the last few years you might have heard of NPM and NodeJS as well.
 
-Besides JavaScript, what NodeJS and Vert.x have in common is that their are based on the same architecture style. NodeJS is based on the Reactor Pattern and Vert.x is based on the [Multi-Reactor Pattern](http://vertx.io/docs/vertx-core/java/#_reactor_and_multi_reactor).  
-Therefore, whilst NodeJS has 1 event-loop, Vert.x will, by default, set you up with 1 event-loop per CPU thread. But the differences do not finish here. Out of the box Ver.x can:
+Besides JavaScript, what NodeJS and Vert.x have in common is that their are based on the same architecture paradigm. NodeJS is based on the Reactor Pattern and Vert.x is based on the [Multi-Reactor Pattern](http://vertx.io/docs/vertx-core/java/#_reactor_and_multi_reactor). Therefore, whilst NodeJS has a single event-loop, Vert.x will autoscale to one event-loop per CPU thread (by default). But the differences do not finish here. Out of the box Vert.x can:
 
  - Scale vertically
  - Scale horizontally without the need for a load balancer (one less hop to go through)
@@ -21,8 +20,8 @@ Therefore, whilst NodeJS has 1 event-loop, Vert.x will, by default, set you up w
  - Propagate the eventbus to the client (firebase like)
  - Deploy in a single Jar or through the Vert.x app ()like the one used in this boilerplate)
 
-Because of this and much more, Vert.x has been gaining some serious traction in the world of [Reactive Systems](https://www.oreilly.com/ideas/reactive-programming-vs-reactive-systems) because of how easy it is to develop, deploy and main Vert.x applications.
-Vert.x is not a new tool and has been around for almost as long as NodeJS but it is its latest installment, version 3.0.0, that converted Vert.x in what might just be the best micro-service technology for containerized applications. The main reason for this might be because it complies the [Reactive Manifesto](http://www.reactivemanifesto.org/).   
+Because of this and so many more features, because of how easy it is to develop, deploy and maintain, Vert.x has been gaining some serious traction in the world of [Reactive Systems](https://www.oreilly.com/ideas/reactive-programming-vs-reactive-systems). 
+Vert.x is not a new tool and has been around for almost as long as NodeJS has but, it is its latest installment, version 3.0.0, that converts Vert.x in what might just be the best micro-service technology for containerized applications. The main reason for this might not be its simple API or how it fully complies with the [Reactive Manifesto](http://www.reactivemanifesto.org/). Its main reason might just be that it makes :computer: fun. Give it a :gun:
 
 ---
 
