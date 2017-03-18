@@ -18,7 +18,7 @@ Besides JavaScript, what NodeJS and Vert.x have in common is that they are based
  - Use Service Discovery
  - Easily communicate with other services through the eventbus
  - Propagate the eventbus to the client (firebase like)
-	- Deploy apps in event-loop or worker mode (or mixed, if programatically)
+ - Deploy apps in event-loop or worker mode (or mixed, if programatically)
  - Deploy in a single Jar or through the Vert.x app ()like the one used in this boilerplate)
 
 Because of this and so many more features, because of how easy it is to develop with, deploy and maintain, Vert.x has been gaining some serious traction in the world of [Reactive Systems](https://www.oreilly.com/ideas/reactive-programming-vs-reactive-systems). 
