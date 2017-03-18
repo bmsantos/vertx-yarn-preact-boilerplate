@@ -5,7 +5,7 @@
   "main": "server_lib/server.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress",
-    "dev:vertx": "export VERTX_OPTS=-Dvertx.disableFileCaching=true && ./node_modules/.bin/vertx run --redeploy=\"web_src/**/* server_src/**/*\" --on-redeploy=\"yarn build\" --launcher-class=io.vertx.core.Launcher server_lib/server.js",
+    "dev:vertx": "export VERTX_OPTS=-Dvertx.disableFileCaching=true && ./node_modules/.bin/vertx run --redeploy=\"web_src/**/*,server_src/**/*\" --on-redeploy=\"yarn build\" --launcher-class=io.vertx.core.Launcher server_lib/server.js",
     "start": "serve ./webroot -s -c 1",
     "start:vertx": "./node_modules/.bin/vertx run server_lib/server.js",
     "prestart": "npm run build",
