@@ -5,17 +5,42 @@
 > :rocket: If you're starting a new project using [Preact], you've come to the right place.
 Below is a step-by-step guide that takes you straight from downloading this boilerplate to production.
 
+# Why NodeJS and Vert.x
+
+If you are a frontend developer you might be familiar with JavaScript and if you've been following the hype of the last few years you might have heard of NPM and NodeJS as well.
+
+Besides JavaScript, what NodeJS and Vert.x have in common is that their are based on the same architecture style. NodeJS is based on the Reactor Pattern and Vert.x is based on the [Multi-Reactor Pattern](http://vertx.io/docs/vertx-core/java/#_reactor_and_multi_reactor).  
+Therefore, whilst NodeJS has 1 event-loop, Vert.x will, by default, set you up with 1 event-loop per CPU thread. But the differences do finish here. Out of the box Ver.x can:
+
+ - Scale vertically
+ - Scale horizontally without the need for a load balancer (one less hop to go through)
+ - Be programmed in several languages (Polyglot)
+ - Promote blocking code into an async future literally at the call of a single function
+ - Use Service Discovery
+ - Easily communicate with other services through the eventbus
+ - Propagate the eventbus to the client (firebase like)
+ - Deploy in a single Jar or through the Vert.x app ()like the one used in this boilerplate)
+
+Because of this and much more, Vert.x has been gaining some serious traction in the world of [Reactive Systems](https://www.oreilly.com/ideas/reactive-programming-vs-reactive-systems) because of how easy it is to develop, deploy and main Vert.x applications.
+Vert.x is not a new tool and has been around for almost as long as NodeJS but it is its latest installment, version 3.0.0, that converted Vert.x in what might just be the best micro-service technology for containerized applications. The main reason for this might be because it complies the [Reactive Manifesto](http://www.reactivemanifesto.org/).   
+
 ---
 
 
 # Quick-Start Guide
 
+- [Before you start](#before-you-start)
 - [Installation](#installation)
 - [Development Workflow](#development-workflow)
 - [Structure](#structure)
 - [CSS Modules](#css-modules)
 - [Handling URLS](#handling-urls)
 - [React Compatibility](#react-compatibility)
+
+## Before you start
+
+You haven't done so yet, you'll need to install NPM. You can do this by installing [NodeJS](https://nodejs.org/en/download/) or, if available, by installing it through your OS package manager (e.g. brew, yum or apt).
+If you will be using Vert.x, then you'll also need to install [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (or above). 
 
 
 ## Installation
