@@ -10,7 +10,7 @@ Below is a step-by-step guide that takes you straight from downloading this boil
 If you are a frontend developer you might be familiar with JavaScript and if you've been following the hype of the last few years you might have heard of NPM and NodeJS as well.
 
 Besides JavaScript, what NodeJS and Vert.x have in common is that their are based on the same architecture style. NodeJS is based on the Reactor Pattern and Vert.x is based on the [Multi-Reactor Pattern](http://vertx.io/docs/vertx-core/java/#_reactor_and_multi_reactor).  
-Therefore, whilst NodeJS has 1 event-loop, Vert.x will, by default, set you up with 1 event-loop per CPU thread. But the differences do finish here. Out of the box Ver.x can:
+Therefore, whilst NodeJS has 1 event-loop, Vert.x will, by default, set you up with 1 event-loop per CPU thread. But the differences do not finish here. Out of the box Ver.x can:
 
  - Scale vertically
  - Scale horizontally without the need for a load balancer (one less hop to go through)
