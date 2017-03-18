@@ -19,7 +19,7 @@ Besides JavaScript, what NodeJS and Vert.x have in common is that they are based
  - Easily communicate with other services through the eventbus
  - Propagate the eventbus to the client (firebase like)
  - Deploy apps in event-loop or worker mode (or mixed, if programatically)
- - Deploy in a single Jar or through the Vert.x app ()like the one used in this boilerplate)
+ - Deploy in a single Jar or through the Vert.x app (like the one used in this boilerplate)
 
 Because of this and so many more features, because of how easy it is to develop with, deploy and maintain, Vert.x has been gaining some serious traction in the world of [Reactive Systems](https://www.oreilly.com/ideas/reactive-programming-vs-reactive-systems). 
 Vert.x is not a new tool and has been around for almost as long as NodeJS has but it is its latest installment, version 3.0.0, that converts Vert.x in what might just be the best micro-service technology for containerized applications. The main reason for this is not its simple API or how it fully complies with the [Reactive Manifesto](http://www.reactivemanifesto.org/). Its main reason might just be that it makes :computer: fun. Give it a :gun:
